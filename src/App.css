@@ -1,38 +1,63 @@
+@font-face {
+  font-family: "Regular";
+  src: url('./ColgateReady-Regular.ttf');
+}
+
+body {
+  margin: 0px;
+  font-family: 'Regular';
+}
+
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  /* background: url('./fondo.svg');
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App img.img-tarjeta{
+  width: 600px;
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App form {
+  margin: 0 auto;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  top: 350px;
+  left: 90px;
+  /* z-index: 10000; */
 }
 
-.App-link {
-  color: #61dafb;
+.App form .input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 3px;
+  font-size: 1.2em;
+  font-family: 'Regular';
+  border: 3px solid #dcb55a;
+  border-radius: 10px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App form button {
+  width: 100%;
+  padding: 5px;
+  background: #dcb55a;
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 800;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
